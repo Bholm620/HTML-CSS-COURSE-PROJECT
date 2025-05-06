@@ -1,0 +1,81 @@
+/*Import link for the Roboto font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/*Import link for the mukta font from fonts.google.com*/
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
+
+body{
+    background-color: white;
+    overflow-x: hidden; /*Hidees the bottom left right scroll bar
+     when elements stretcch beyond the screen border*/
+}
+
+/*NAVBAR*/
+
+li{
+    display: inline;
+    padding: 5px;
+}
+
+a{
+    font-family: 'Roboto', sans-serif; /*Font from fonts.google.com*/
+    font-size: 20px; /*Font size*/
+    font-weight: 700; /*Font weight*/ 
+    text-shadow: 1px .5px 4px rgba(146, 39, 39, 0.712);
+    color: white;
+    text-decoration: none; /*Removes the underline from the link*/
+}
+
+a:hover{
+    color: #216391; /*Changes the color of the link 
+    when hovered*/
+}
+
+.nav-bar{
+    background-color: #63ec13;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*The following minus margins stretch the nav bar background
+    beyond the web browser edge*/
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    position: sticky; /*Keeps the nav bar at the top of the page*/
+
+    top: 0; /*Keeps the nav bar at the top of the page*/
+
+
+
+    /*Creates a line under the Home and contact links to seperate
+    them from the images links*/
+    #nav-border{
+        padding-bottom: 10px;
+        border-bottom: 3px solid #ffffff;
+    }
+
+    /*HEADERS*/
+    h1, h2, h3{
+        color: #0a3f63;
+        text-align: center;  
+        font-family: "Mukta", sans-serif; /*Font from fonts.google.com*/
+        text-shadow: 1px .5px 4 px rgba(0, 0, 0, 0.5);
+        margin: 0px; 
+    }
+
+    h1{
+        font-size: 60px;
+        margin-top: 50px;
+    }
+
+    h2{
+        font-size: 45px;
+        margin-top: 20px;
+    }
+
+    h3{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    #contact-h3{
+        text-shadow: none;
+    }
