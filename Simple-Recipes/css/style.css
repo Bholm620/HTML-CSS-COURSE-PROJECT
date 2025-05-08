@@ -1,0 +1,282 @@
+/*HTML FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Mukta&display=swap');
+
+html{
+    overflow-x: hidden; /*Prevents horizontal scrolling*/
+    scroll-behavior: smooth; /*Smooth scrolling*/
+}
+
+
+/*NAVBAR*/
+.nav-bar{
+    position: sticky; /*Creates a sticky navbar*/
+
+    top: 0; /*Sets the navbar to the top of the page*/
+    z-index: 9; /*Sets the z-index to 9 so it is above other elements*/
+}
+
+ul{
+    display: flex; /*Displays the list items in a row*/
+    list-style-type: none; /*Removes the bullet points from the list items*/
+    align-items: center; /*Aligns the items in the center*/
+    margin: -8px -8px 0px -8px; /*Sets the margin to -8px on all sides*/
+    background-color: rgb(1, 128, 106); /*Sets the background color to a dark green*/
+    border-bottom: 5px solid rgb(247, 177, 106);
+
+}
+
+a{
+    display: block; /*Sets the display to block*/
+    font-family: "Josefin Slab", serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: (247, 177 188);
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+    text-decoration: none; /*Removes the underline from the links*/
+    transition: background-color 0.3s ease-in; /*Adds a transition effect to the background color*/
+
+}
+
+a:hover, .drop:hover a:only-of-type{
+    background-color: rgb(149, 238, 223);
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease-in;
+     /*Adds a shadow to the links when hovered*/
+}
+
+.rollover-menu{
+    display: none;
+    position: absolute; /*Sets the position to absolute*/
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*Creates a trigger effect when hovers over link*/
+.drop:hover .rollover-menu{
+    display:block;
+}
+
+.rollover-menu a{
+    color: rgb(0, 80, 67);
+}
+
+.rollover-menu a:hover{
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+}
+
+.rollover-menu a:nth-child(1){
+    border-top: 5px solid rgb(238. 118, 136);
+}
+
+/*Footer*/
+
+footer{
+    align-items: center;
+    margin: 0px -8px -8px -8px;
+    background-color: rgb(1, 128, 106); /*Sets the background color to a dark green*/
+    border-top: 5px solid rgb(247, 177, 188);
+    bottom: 0;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    width: 33%;
+
+}
+
+td p{
+    font-family: "Josefin Slab", serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(247, 177, 188);
+    text-align: center;
+}
+
+/*BODY*/
+
+.container{
+    display: inline-block;
+    background-size: 100%;
+    padding-top: 60px;
+    padding-left: 30px; 
+
+}
+
+/*Header*/
+
+h1{
+    font-family: "Josefin Slab", serif;
+    font-size: 80px;
+    color: rgb(0, 80, 67);
+    text-align: center;
+}
+
+h2, h3, h4{
+    font-family: "Josefin Slab", serif;
+    text-align: center;
+}
+
+h2{
+    color: rgb(0, 80, 67);
+    font-size: 60px;
+    text-decoration: underline;
+    text-decoration-color: rgb(247, 177, 188);
+    }
+
+h3{
+    font-size: 30px;
+}
+
+h4{
+    font-size: 15px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/*paragraphs*/
+
+p{
+    font-family: 'josefin slab', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(0, 80, 67);
+    text-align: center;
+}
+
+/*Images*/
+
+/*positions elements to sit side by side on the screen*/
+.column{
+    float: left;
+    width: 48%;
+    padding: 10px;
+}
+
+/*styling for screens 1200px or smaller*/
+@media screen and (max-width: 1200px){
+    .column{
+        width: 100%;
+        padding: 0px;
+        margin: -15px;
+    }
+}
+
+
+
+.column img:nth-child(-n + 7){
+    width: 500px;
+    height: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),
+    0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-container{
+    width: 500px;
+    height: 350px;
+    margin: 100px auto 180px;
+}
+
+/*styling for mobile devices*/
+@media screen and(max-width: 600px){
+    .column img:nth-child(-n +7){
+        width: 350px;
+        height: 225px;
+    }
+    .recipe-container{
+        width: 350px;
+        height: 225px;
+        margin: 100px auto 180px;
+    }
+}
+
+.recipe-card-background{
+    background-color: rgb(149, 238, 223);
+}
+
+/* CONTACT FORM CSS*/
+
+#contact{
+    display: block;
+    margin-bottom: 50px;
+}
+
+form{
+    display: table; /*this will display the form in a table format
+    as rows and columns*/
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto; /*the browser will automatically adjust the margin to center the form*/
+}
+
+form imput{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: rgb(165, 165, 165);
+    border: 2px solid rgb (165, 165, 165);
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px 15px 10px 0px;
+    transition: 0.3s ease-out;
+}
+
+form input:focus{
+    border: 2px solid rgb(1, 128, 106);
+    color: black;
+    outline: none;
+    transition: .3s ease-out;
+}
+
+label{
+    font-family: 'josefin slab', serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+textarea{
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    resize: both;
+    border: 3px solid rgb(165, 165, 165);
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: rgb(165, 165, 165);
+    transition:0.3s ease-out;
+}
+
+textarea:focus{
+    color: black;
+    border: 3px solid rgb(1, 128, 106);
+    transition: 0.3s ease-out;
+    outline: none;
+}
+
+input[type="submit"]{
+    background-color: rgb(1, 128, 106);
+    color: white;
+    font-family: 'josefin slab', serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 35px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    float: right;
+    margin-top: 20px
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(247, 177, 188);
+    
+}
