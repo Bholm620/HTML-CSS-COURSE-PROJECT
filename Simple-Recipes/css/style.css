@@ -114,18 +114,20 @@ td p{
 h1{
     font-family: "Josefin Slab", serif;
     font-size: 80px;
-    color: rgb(0, 80, 67);
+    color: rgb(1, 128, 106);
     text-align: center;
 }
 
 h2, h3, h4{
     font-family: "Josefin Slab", serif;
     text-align: center;
+    color: rgb(1, 177, 188)
 }
 
 h2{
-    color: rgb(0, 80, 67);
+    
     font-size: 60px;
+    color: rgb(247, 177, 188);
     text-decoration: underline;
     text-decoration-color: rgb(247, 177, 188);
     }
