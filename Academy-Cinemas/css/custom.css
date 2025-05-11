@@ -1,0 +1,138 @@
+/*font passion from fonts.google*/
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Josefin+Slab&family=Mukta&family=Passion+One:wght@400;700;900&display=swap');
+
+
+/*creates global CSS variables that can be reused
+throughout the file*/
+
+:root{
+    --main-color: rgb(126, 133, 130);
+    --main-color-accent: rgb(237, 192, 3);
+    --main-color-transparent: rgba(126, 133, 130, 0.8);
+    --secondary-color: rgba(128, 0, 0, 0.9);
+    --accent-color: rgb(36, 36, 36);
+    --accent-text-color: rgb(255, 255, 255);  
+    --main-font-family: 'Passion One', cursive;
+}
+
+body{
+    background-image:url(../images/theater-curtains.jpg);
+    background-size: 100% 120%;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/*NAVBAR*/
+
+.navbar{
+    background-color: var(--secondary-color);
+    border-bottom: 5px solid rgb(98, 0, 0);
+    height: 100px
+}
+
+/*Affects the title in the navbar academy cinemas*/
+.navbar-brand{
+    color: var(--main-color-accent);
+    font-family: var(--main-font-family);
+    font-size: 45px;
+    padding-left: 30px;
+}
+
+.nav-link{
+    color: var(--main-color-accent);
+    font-family: var(--main-font-family);
+    font-size: 35px
+}
+
+/*affects the hover state of the links in the navbar*/
+.nav-link:hover{
+    color: var(--main-color-transparent);
+    text-shadow: 0 0 3px rgba(255, 123, 0, 0.6);
+}
+
+/*sets the color of the active link in the navbar*/
+.nav-link:focus{
+    color: var(--accent-text-color);
+    text-shadow: 0 0 3px rgba(255, 123, 0, 0.6);
+}
+
+/*adjust the left padding*/
+.navbar-expand-lg .navbar-nav .nev-link{
+    padding-left: 1.5rem;
+}
+
+/*MOVIE DROP DOWN MENU*/
+
+.dropdown-menu{
+    border: none;
+    border-radius: 0;
+    box-shadow: 0px, 0px, 16px, 2px, rgba(0, 0, 0, 0.4);
+    background-color: var(--main-color);
+    padding: 0px; /*overrides bootstrap default padding*/  
+}
+
+.dropdown-item{
+    color: var(--accent-color);
+    font-family: var(--main-font-family);
+    text-align: center;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(117, 77, 13);
+}
+
+.dropdown-item:hover, .dropdown-item:focus{
+    color: var(--accent-text-color);
+    background-color: var(--main-color);
+}
+
+/*MOBILE MENU*/
+
+.navbar-toggler{
+    border: none;
+    transition: 0.5s ease;
+}
+
+.navbar-toggler:focus{
+    box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) rgb(98, 0, 0);
+    transition: 0.5s ease;
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb%28237, 192, 3%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/*header image*/
+
+#header-image{
+    padding-top: 150px;
+}
+
+/*general styling*/
+
+h1, h3, p{
+    cursor: default;
+}
+
+h1{
+    font-family: var(--main-font-family);
+    font-size: 100px;
+    color: var(--main-color-accent);
+    text-align: center;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+h3{
+    font-family: var(--main-font-family);
+    font-size: 50px;
+}
+
+b{
+    font-weight: 600;
+}
+
+/*movie cards*/
+
+.container{
+    padding: 100px;
+}
