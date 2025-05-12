@@ -3,14 +3,37 @@
     ((viewport width percentage - minimum viewport width) /
     (maximum viewport width - minimum viewport width)))*/
 
-    h1 {
+    h1{
         font-size: calc(50px + (100-50)*((100vw-320px) / (1920-320)));
     }
 
-.lead{
+    h4{
+        font-size: calc(25px+(35-25)*((100vw-320px) / (1920-320)));
+    }
+
+
+.lead, .btn{
     font-size: calc(50px + (50-100)*((100vw-320px) / (1920-320)));
 }
 
+.yellow-btn{
+    font-size: calc(25px + (25-20)*((100vw-320px) / (1920-320)));
+}
+
+    .card{
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card-body{
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    .spacer{
+        padding-top: 20px;
+    }
 }
 
 @media screen and (max-width: 990px) {
@@ -32,3 +55,17 @@
         padding-left: 60px;
     }
 }
+
+@media screen and (max-width: 1200px){
+    html{
+        scroll-padding-top: 300px
+    }
+
+    img{
+        margin-bottom: 30px;
+            }
+}
+
+    .container{
+        padding: 50px;
+    }

@@ -217,7 +217,7 @@ form{
     margin-right: auto; /*the browser will automatically adjust the margin to center the form*/
 }
 
-form imput{
+form input{
     font-family:'Courier New', Courier, monospace;
     font-size: 15px;
     color: rgb(165, 165, 165);

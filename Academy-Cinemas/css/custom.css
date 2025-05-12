@@ -1,5 +1,7 @@
 /*font passion from fonts.google*/
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Josefin+Slab&family=Mukta&family=Passion+One:wght@400;700;900&display=swap');
+/*font from yesteryear*/
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Josefin+Slab&family=Mukta&family=Passion+One:wght@400;700;900&family=Yesteryear&display=swap');
 
 
 /*creates global CSS variables that can be reused
@@ -13,6 +15,11 @@ throughout the file*/
     --accent-color: rgb(36, 36, 36);
     --accent-text-color: rgb(255, 255, 255);  
     --main-font-family: 'Passion One', cursive;
+    --secondary-font-family:"Yesteryear", cursive;
+}
+
+html{
+    scroll-padding-top: 300px;
 }
 
 body{
@@ -110,7 +117,7 @@ body{
 
 /*general styling*/
 
-h1, h3, p{
+h1, h3, h4, h5, p{
     cursor: default;
 }
 
@@ -127,12 +134,155 @@ h3{
     font-size: 50px;
 }
 
+h4{
+    font-family: var(--secondary-font-family);
+    font-size: 25px;
+}
+
+h5{
+    font-family: var(--main-font-family);
+    font-size: 30px;
+}
+
 b{
     font-weight: 600;
+}
+
+img{
+    border-radius: 5px;
 }
 
 /*movie cards*/
 
 .container{
     padding: 100px;
+}
+
+.card{
+    border: 5px solid var(--main-color);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card-body{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.spacer{
+    padding-top: 50px;
+}
+
+/*buttons*/
+/*creates the main styling for buttons w/ .btn class*/
+.btn{
+    background-color: var(--main-color);
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: var(--accent-color);
+    font-family: var(--main-font-family);
+    font-size: 18px;
+}
+
+.btn:focus{
+    border-color: transparent;
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
+}
+
+.btn:hover{
+    border-color: transparent;
+    background-color: var(--main-color);
+color: var(--accent-text-color)
+}
+
+.yellow-btn{
+    background-color: var(--main-color-accent);
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    color: var(--accent-color);
+    width: 150px;
+    font-size: 25px;
+}
+
+.yellow-btn:hover, .yellow-btn:focus{
+    background-color: var(--main-color-accent);
+    color: var(--accent-text-color);
+}
+
+/*ticket cards*/
+
+#tickets .card{
+    padding: 40px;
+    height: 250px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.form-select{
+    font-family: var(--main-font-family);
+    font-size: 20px;
+    border: 3px solid var(--main-color);
+    transition: border-color 0.5s ease-in;
+}
+
+.form-select:focus{
+    border-color: var(--secondary-color);
+    box-shadow: none;
+    transition: 0.5 ease-in;
+}   
+
+/*select number of tickets*/
+input[type=number]{
+    width: 70px;
+    padding: 5px;
+    font-family: var(--main-font-family);
+    font-size: 20px;
+    border: 3px solid var(--main-color);
+    transition: border-color 0.5s ease-in;
+}
+
+input[type=number]:focus{
+    border: 3px;
+    transition: 0.5 ease-in;
+    outline: 0; /*removes the blue outline*/
+}
+
+/*contact*/
+
+.form-control{
+    border: solid 3px var(--main-color);
+    transition: 1s ease;
+}
+
+.form-control:focus{
+    color: #212529;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 0px .25rem var(--main-color);
+}
+
+#contact-submit{
+    float: right;
+}
+
+/*footer*/
+footer{
+    border-top: 5px solid var(--main-color);
+    background-color: rgb(0, 0, 0, 0.6);
+    margin: 0px, -15px, 0px, -15px;
+}
+
+.footer-text{
+    color: var(--accent-text-color);
+    font-family: var(--main-font-family);
+    font-size: 30px;    
+}
+
+.footer-img{
+    width: auto;
+    height: 130px;
 }
