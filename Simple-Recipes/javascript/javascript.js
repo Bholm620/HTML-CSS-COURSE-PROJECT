@@ -31,42 +31,42 @@ for (var i = 0; i < closeBtn.length; i++) {
 }
 
 //email validation
-document.getElementById('contactForm').addEventListener('submit',
-    function (event) {
-        event.preventDefault();
-        //variables to validate each field is filled out
-        const firstName = document.getElemenetById('firstName').value;
-        const lastName = document.getElementById('lastName').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const message = document.getElementById('message').value;
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-        //email check
-        const emailPattern = /^[a-aZ-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2, 4}$/;
+    // this gets form values
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-        //message on email stuff
+    // email check
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-        const valMsg = document.getElementById('validateMsg');
+    // message on email stuff
+    const valMsg = document.getElementById('validateMsg');
 
-        if (!firstName || !lastName || !phone || !message) {
-            //checks if fields have been filled out
-            valMsg.innerHTML = '<p style="color: red;">please fill out all empty fields</p>';
-        } else if (!emailPattern.test(email)) {
-            //checks valid email
-            valMsg.innerHTML = '<p style = "color: red;">Please enter a valid email, okay?</p>'
-            valMsg.innerHTML = '<p style = "color: red;">gracious por submission</p>'
-        }
-        const formData = {
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            phone: phone,
-            message: message,
-            subscribe: document.getElementById('subscription').checked
-        };
+    if (!firstName || !lastName || !phone || !message) {
+        valMsg.innerHTML = '<p style="color: red;">Please fill out all empty fields</p>';
+        return;  // stop execution if invalid
+    } else if (!emailPattern.test(email)) {
+        valMsg.innerHTML = '<p style="color: red;">Please enter a valid email, okay?</p>';
+        return;
     }
 
-    //displays what the user wrote
-    console.log(JSON.stringify(formData))
+    // Clear any validation message if all good
+    valMsg.innerHTML = '';
 
-)
+    const formData = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        message: message,
+        subscribe: document.getElementById('subscription').checked
+    };
+
+    // display what the user wrote
+    console.log(JSON.stringify(formData));
+});
