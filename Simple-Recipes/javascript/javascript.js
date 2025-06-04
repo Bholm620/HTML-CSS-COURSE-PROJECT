@@ -1,5 +1,10 @@
 //recipe
 
+let x = document.getElementById("txt");
+setTimeout(function(){ x.value="2 seconds" }, 2000);
+setTimeout(function(){ x.value="4 seconds" }, 4000);
+setTimeout(function(){ x.value="6 seconds" }, 6000);
+
 //sets up the buttons
 var btns = document.querySelectorAll("input.modal-button");
 
@@ -53,6 +58,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     } else if (!emailPattern.test(email)) {
         valMsg.innerHTML = '<p style="color: red;">Please enter a valid email, okay?</p>';
         return;
+    } else {
+        valMsg.innerHTML = '<p style="color: green;">Thank you for your submission!</p>';
     }
 
     // Clear any validation message if all good
@@ -70,3 +77,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // display what the user wrote
     console.log(JSON.stringify(formData));
 });
+
+const myTimeout = setTimeout(myGreeting, 5000);
+
+function myStopFunction() {
+  clearTimeout(myTimeout);
+}
