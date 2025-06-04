@@ -83,3 +83,11 @@ const myTimeout = setTimeout(myGreeting, 5000);
 function myStopFunction() {
   clearTimeout(myTimeout);
 }
+
+var cards = document.querySelectorAll('.card');
+
+[...cards].forEach((card)=>{
+  card.addEventListener( 'click', function() {
+    card.classList.toggle('is-flipped');
+  });
+});
