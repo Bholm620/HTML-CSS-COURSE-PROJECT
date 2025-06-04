@@ -197,7 +197,7 @@
                 <div class="card text-center">
                     <h5 class="card-title">Please select a movie</h5>
                     <div class="card-body">
-                        <select class="form-select" aria-label="Movie title selection">
+                        <select id="movieSelect" class="form-select" aria-label="Movie title selection">
                             <option selected>Select movie</option>
                             <option value="1">Ben Hur</option>
                             <option value="2">Earth</option>
@@ -212,7 +212,7 @@
                 <div class="card text-center">
                     <h5 class="card-title">Please select a time</h5>
                     <div class="card-body">
-                        <select class="form-select" aria-label="Movie title selection">
+                        <select id="timeSelect" class="form-select" aria-label="Movie title selection">
                             <option selected>Select Time</option>
                             <option value="1">10:00am</option>
                             <option value="2">1:10pm</option>
@@ -234,10 +234,23 @@
             <!--buy tickets button-->
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <button type="submit" class="btn yellow-btn">Buy Tickets</button>
+                    <button  type="submit" class="btn yellow-btn" onclick="buyTickets()">Buy Tickets</button>
                 </div>
             </div>
     </section>
+    <!--toasty-->
+    <div id="toastDisplay" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    
+    <strong class="me-auto">Ticket Information</strong>
+    
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div id="toastBody" class="toast-body">
+    <!--comments will be displayed here-->
+
+  </div>
+</div>
     <!--contact-->
     <section>
         <div class="container" id="contact">
