@@ -9,13 +9,13 @@ popoverTriggerList.forEach(function (element) {
         content: content,
         html: true,
         trigger: 'hover',
-        
+
+    });
 });
-});  
 
 var toastElList = [].slice.call(document.querySelectorAll('.toast'))
 var toastList = toastElList.map(function (toastEl) {
-  return new bootstrap.Toast(toastEl)
+    return new bootstrap.Toast(toastEl)
 })
 
 function displaySelectedMovieOptions() {
@@ -23,7 +23,7 @@ function displaySelectedMovieOptions() {
     var time = document.getElementById("timeSelect").options[document.getElementById('timeSelect').selectedIndex].text;
     var quantity = document.getElementById("quantity").value;
 
-    var message = "Purchase Confirmed for: " + movie + "\nTime: "  + time + "\nTickets: " + quantity;
+    var message = "Purchase Confirmed for: " + movie + "\nTime: " + time + "\nTickets: " + quantity;
 
     var toastBody = document.getElementById('ToastBody');
     toastBody.textContent = message;
@@ -35,3 +35,20 @@ function buyTickets() {
     displaySelectedMovieOptions();
 }
 
+$(document).on("scroll", function () {
+    if ($(document).scrollTop() > 50) {
+        $("nav").addClass("nav-shrink");
+        $("div.navbar-collapse").css("margin-top", "-6px");
+    } else {
+        $("nav").removeClass("nav-shrink");
+        $("div.navbar-collapse").css("margin-top", "14px");
+    }
+}
+
+);
+
+$(document).ready(function () {
+    $(".nav-bar").on('click', '.nav-link:not(".dropdown-toggle"), .dropdown-item', function () {
+        $(".navbar-collapse").collapse('hide');
+    });
+});

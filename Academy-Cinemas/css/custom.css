@@ -68,6 +68,11 @@ body{
     padding-left: 1.5rem;
 }
 
+.nav-shrink {
+    height: 80px;
+    transition: .5s ease;
+}
+
 /*MOVIE DROP DOWN MENU*/
 
 .dropdown-menu{
