@@ -7,11 +7,34 @@
     <meta name="viewport" content="width=device-width" />
     <title>Brandon M. Holm</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="js/js.js">
 </head>
 
 <!--Body-->
 
 <body class="Background">
+    
+
+
+    <!-- A button to open the popup form -->
+    <button class="open-button" onclick="openForm()">Open Form</button>
+
+    <!-- The form -->
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
 
     <!--Navbar-->
     <div class="Navbar">
@@ -44,8 +67,8 @@
                 <br>Che Guerva</br>
                 <q>Learning is always rebellion... Every bit of new truth discovered is revolutionary to what was
                     believed before.</q>
-                    <br>Margaret Lee Runbeck</br>
-                
+                <br>Margaret Lee Runbeck</br>
+
 
                 <br> My name is Brandon Ralph Maccio Holm. Welcome to my portfolio website. On it, I will tell you about
                 my background and experience.
@@ -65,7 +88,8 @@
         <div class="Column_1">
             <h1>The Story</h1>
             <p>
-                I am an aspiring software developer and artist who loves to create and code! As a father of thirty-two, I enjoy time with strangers and
+                I am an aspiring software developer and artist who loves to create and code! As a father of thirty-two,
+                I enjoy time with strangers and
                 standing on one foot.
                 <br>
                 <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech
@@ -128,6 +152,7 @@
         <br>
         </p>
     </footer>
+
 </body>
 
 </html>
