@@ -37,19 +37,7 @@
     <!--RECIPES-->
     <section>
         <!--FEATURED RECIPE-->
-        <div class="scene scene--card">
-            <div class="card">
-                <div class="card__face card__face--front">front</div>
-                <div class="card__face card__face--back">back</div>
-            </div>
-        </div>
-        <div class="scene scene--card">
-            <div class="card">
-                <div class="card__face card__face--front">front</div>
-                <div class="card__face card__face--back">back</div>
-            </div>
-        </div>
-        <p>Click card to flip.</p>
+
         <div class="container" id="featured">
             <h2>Featured Recipe</h2>
             <div class="column recipe-card-background">
@@ -81,96 +69,123 @@
             <!--PASTA-->
             <div class="column" id="pasta">
                 <div class="recipe-container">
-                    <h3>Pasta</h3>
-                    <div>
-                        <img src="images/Pasta.jpg">
+                    <h3>Saucy Tortelloni Parm</h3>
+                    <div class="flip">
+                        <!--FRONT-->
+                        <div class="flip-front">
+                            <img src="images/tortelloni.jpeg">
+                        </div>
+                        <!--BACK-->
+                        <div class="flip-back">
+                            <div class="text-container">
+                                <h4>Prep Time:</h4>
+                                <p>20 - 30 minutes</p>
+                                <h4>Level:</h4>
+                                <p>easy</p>
+                                <input class="modal-button" href="#recipeModalOne" type="button" value="Recipe">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h4>Prep Time</h4>
-                    <p>20-30 minutes</p>
-                    <h4>Level:</h4>
-                    <p>easy</p>
-                    <input class="modal-button" href="#recipeModalTwo" type="button" value="Recipe">
-                </div>
             </div>
-
-            <!--CHICKEN-->
-            <div class="column recipe-card-background" id="chicken">
+            <div class="column" id="pasta">
                 <div class="recipe-container">
-                    <h3>Chicken</h3>
-                    <img src="images/Chicken.jpg">
+                    <h3>Pasta</h3>
+                    <!--front-->
+                    <div class="flip-front">
+                        <img src="images/Pasta.jpg">
+                    </div>
+                    <!--back-->
+                    <div class="flip-back">
+                        <h3>Delicious Pasta</h3>
+                        <p>Enjoy this easy pasta recipe that is perfect for a quick weeknight dinner.</p>
+                        <input class="modal-button" href="#recipeModalOne" type="button" value="Recipe">
+                    </div>
+                    <div>
+                        <h4>Prep Time</h4>
+                        <p>20-30 minutes</p>
+                        <h4>Level:</h4>
+                        <p>easy</p>
+                        <input class="modal-button" href="#recipeModalTwo" type="button" value="Recipe">
+                    </div>
                 </div>
-                <div>
-                    <h4>Prep Time</h4>
-                    <p>20-30 minutes</p>
-                    <h4>Level:</h4>
-                    <p>easy</p>
-                    <input class="modal-button" href="#recipeModalThree" type="button" value="Recipe">
-                </div>
-            </div>
 
-            <!--PORK-->
-            <div class="column recipe-card-background" id="pork">
-                <div class="recipe-container">
-                    <h3>Pork</h3>
-                    <img src="images/Pork.jpg">
+                <!--CHICKEN-->
+                <div class="column recipe-card-background" id="chicken">
+                    <div class="recipe-container">
+                        <h3>Chicken</h3>
+                        <img src="images/Chicken.jpg">
+                    </div>
+                    <div>
+                        <h4>Prep Time</h4>
+                        <p>20-30 minutes</p>
+                        <h4>Level:</h4>
+                        <p>easy</p>
+                        <input class="modal-button" href="#recipeModalThree" type="button" value="Recipe">
+                    </div>
                 </div>
-                <div>
-                    <h4>Prep Time</h4>
-                    <p>20-30 minutes</p>
-                    <h4>Level:</h4>
-                    <p>medium</p>
-                    <input class="modal-button" href="#recipeModalFour" type="button" value="Recipe">
-                </div>
-            </div>
 
-            <!--BISCUITS-->
-            <div class="column" id="biscuit">
-                <div class="recipe-container">
-                    <h3>Biscuit</h3>
-                    <img src="images/Biscuit.jpg">
+                <!--PORK-->
+                <div class="column recipe-card-background" id="pork">
+                    <div class="recipe-container">
+                        <h3>Pork</h3>
+                        <img src="images/Pork.jpg">
+                    </div>
+                    <div>
+                        <h4>Prep Time</h4>
+                        <p>20-30 minutes</p>
+                        <h4>Level:</h4>
+                        <p>medium</p>
+                        <input class="modal-button" href="#recipeModalFour" type="button" value="Recipe">
+                    </div>
                 </div>
-                <div>
-                    <h4>Prep Time</h4>
-                    <p>40-50 minutes</p>
-                    <h4>Level:</h4>
-                    <p>medium</p>
-                    <input class="modal-button" href="#recipeModalFive" type="button" value="Recipe">
-                </div>
-            </div>
 
-            <!--FISH-->
-            <div class="column recipe-card-background" id="fish">
-                <div class="recipe-container">
-                    <h3>Fish</h3>
-                    <img src="images/Cod.jpg">
+                <!--BISCUITS-->
+                <div class="column" id="biscuit">
+                    <div class="recipe-container">
+                        <h3>Biscuit</h3>
+                        <img src="images/Biscuit.jpg">
+                    </div>
+                    <div>
+                        <h4>Prep Time</h4>
+                        <p>40-50 minutes</p>
+                        <h4>Level:</h4>
+                        <p>medium</p>
+                        <input class="modal-button" href="#recipeModalFive" type="button" value="Recipe">
+                    </div>
                 </div>
-                <div>
-                    <h4>Prep Time</h4>
-                    <p>30-40 minutes</p>
-                    <h4>Level:</h4>
-                    <p>easy</p>
-                    <input class="modal-button" href="#recipeModalSix" type="button" value="Recipe">
-                </div>
-            </div>
 
-            <!--DESSERT-->
-            <div class="column" id="smores">
-                <div class="recipe-container">
-                    <h3>Dessert</h3>
-                    <img src="images/Smores.jpg">
+                <!--FISH-->
+                <div class="column recipe-card-background" id="fish">
+                    <div class="recipe-container">
+                        <h3>Fish</h3>
+                        <img src="images/Cod.jpg">
+                    </div>
+                    <div>
+                        <h4>Prep Time</h4>
+                        <p>30-40 minutes</p>
+                        <h4>Level:</h4>
+                        <p>easy</p>
+                        <input class="modal-button" href="#recipeModalSix" type="button" value="Recipe">
+                    </div>
                 </div>
-                <div>
-                    <h4>Prep Time</h4>
-                    <p>30-40 minutes</p>
-                    <h4>Level:</h4>
-                    <p>easy</p>
-                    <input class="modal-button" href="#recipeModalSeven" type="button" value="Recipe">
-                </div>
-            </div>
 
-        </div>
+                <!--DESSERT-->
+                <div class="column" id="smores">
+                    <div class="recipe-container">
+                        <h3>Dessert</h3>
+                        <img src="images/Smores.jpg">
+                    </div>
+                    <div>
+                        <h4>Prep Time</h4>
+                        <p>30-40 minutes</p>
+                        <h4>Level:</h4>
+                        <p>easy</p>
+                        <input class="modal-button" href="#recipeModalSeven" type="button" value="Recipe">
+                    </div>
+                </div>
+
+            </div>
     </section>
 
     <section>
